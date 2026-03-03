@@ -8,7 +8,6 @@ from torchvision import models, transforms
 
 
 def construir_modelo(cantidad_clases: int):
-    # Debe coincidir con el modelo que entrenaste (EfficientNet-B0)
     modelo = models.efficientnet_b0(weights=None)
     entrada_clasificador = modelo.classifier[1].in_features
     modelo.classifier[1] = nn.Linear(entrada_clasificador, cantidad_clases)

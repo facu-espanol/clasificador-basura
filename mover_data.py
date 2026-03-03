@@ -6,7 +6,7 @@ dst_root = Path("dataset_split")
 
 train_ratio, val_ratio, test_ratio = 0.80, 0.10, 0.10
 seed = 42
-move_files = True  # MUEVE, no copia
+move_files = True 
 
 random.seed(seed)
 classes = [d for d in src_root.iterdir() if d.is_dir()]
@@ -50,7 +50,6 @@ for c in classes:
 
     print(f"{c.name:10s} total={n:4d}  train={len(splits['train']):4d}  val={len(splits['val']):4d}  test={len(splits['test']):4d}")
 
-# Chequeo final: contar en dataset_split
 for p in dst_root.rglob("*"):
     if p.is_file():
         total_after += 1

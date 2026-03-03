@@ -15,7 +15,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 # -------------------------
 # Configuración
 # -------------------------
-ruta_dataset = Path("dataset_split")  # <- tu carpeta
+ruta_dataset = Path("dataset_split")  
 tamano_lote = 32
 epocas = 12
 tasa_aprendizaje = 3e-4
